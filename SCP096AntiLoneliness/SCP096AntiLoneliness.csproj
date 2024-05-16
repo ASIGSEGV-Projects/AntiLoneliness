@@ -1,0 +1,410 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <Nullable>disable</Nullable>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <PackageId>de.asigsegv.scp096AL</PackageId>
+        <Title>SCP096AntiLoneliness</Title>
+        <Authors>ASIGSEGV</Authors>
+        <Company>ASIGSEGV</Company>
+        <Copyright>© Copyrights ASIGSEGV 2024</Copyright>
+        <Product>SCP-096 Anti-Loneliness</Product>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Description>Makes SCP-096 able to rage at any time for a short period of time.</Description>
+        <Platforms>AnyCPU</Platforms>
+        <LangVersion>8</LangVersion>
+        <TargetFramework>net48</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="BouncyCastle.Cryptography">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\BouncyCastle.Cryptography.dll</HintPath>
+        </Reference>
+        <Reference Include="Caress">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Caress.dll</HintPath>
+        </Reference>
+        <Reference Include="CommandSystem.Core">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\CommandSystem.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="DnsClient">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\DnsClient.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.API">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\dependencies\Exiled.API.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.CreditTags">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\Exiled.CreditTags.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.CustomItems">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\Exiled.CustomItems.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.CustomRoles">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\Exiled.CustomRoles.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.Events">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\Exiled.Events.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.Loader">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\Exiled.Loader.dll</HintPath>
+        </Reference>
+        <Reference Include="Exiled.Permissions">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\Exiled.Permissions.dll</HintPath>
+        </Reference>
+        <Reference Include="Facepunch.Steamworks.Win64">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Facepunch.Steamworks.Win64.dll</HintPath>
+        </Reference>
+        <Reference Include="Mirror">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Mirror.dll</HintPath>
+        </Reference>
+        <Reference Include="Mirror.Components">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Mirror.Components.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Security">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Mono.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="mscorlib">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\mscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="netstandard">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\netstandard.dll</HintPath>
+        </Reference>
+        <Reference Include="NorthwoodLib">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\NorthwoodLib.dll</HintPath>
+        </Reference>
+        <Reference Include="PluginAPI">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\PluginAPI.dll</HintPath>
+        </Reference>
+        <Reference Include="Pooling">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Pooling.dll</HintPath>
+        </Reference>
+        <Reference Include="System">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.dll</HintPath>
+        </Reference>
+        <Reference Include="System.ComponentModel.Composition">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.ComponentModel.Composition.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Configuration">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Configuration.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Core">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Data">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Data.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Data.DataSetExtensions">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Data.DataSetExtensions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Drawing">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Drawing.dll</HintPath>
+        </Reference>
+        <Reference Include="System.EnterpriseServices">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.EnterpriseServices.dll</HintPath>
+        </Reference>
+        <Reference Include="System.IO.Compression">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.IO.Compression.dll</HintPath>
+        </Reference>
+        <Reference Include="System.IO.Compression.FileSystem">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.IO.Compression.FileSystem.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Net.Http">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Net.Http.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Numerics">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Numerics.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.Serialization">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Runtime.Serialization.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Security">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="System.ServiceModel.Internals">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.ServiceModel.Internals.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Transactions">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Transactions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Xml.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml.Linq">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\System.Xml.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Burst">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.Burst.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Burst.Unsafe">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.Burst.Unsafe.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Mathematics">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.Mathematics.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.ProBuilder">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.ProBuilder.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.ProBuilder.Csg">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.ProBuilder.Csg.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.ProBuilder.KdTree">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.ProBuilder.KdTree.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.ProBuilder.Poly2Tri">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.ProBuilder.Stl">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.ProBuilder.Stl.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.RenderPipelines.Core.Runtime">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Timeline">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.Timeline.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.VisualEffectGraph.Runtime">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AccessibilityModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.AccessibilityModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AIModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.AIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AndroidJNIModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.AndroidJNIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.AnimationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ARModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ARModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AssetBundleModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.AssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.AudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClothModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ClothModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClusterInputModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ClusterInputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClusterRendererModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ClusterRendererModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CrashReportingModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.CrashReportingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.DirectorModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.DirectorModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.DSPGraphModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.DSPGraphModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GameCenterModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.GameCenterModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GIModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.GIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GridModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.GridModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.HotReloadModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.HotReloadModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ImageConversionModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.InputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.JSONSerializeModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.JSONSerializeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.LocalizationModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.LocalizationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.NVIDIAModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.NVIDIAModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ParticleSystemModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PerformanceReportingModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.PerformanceReportingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Physics2DModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.Physics2DModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ProfilerModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ProfilerModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ScreenCaptureModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.ScreenCaptureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SharedInternalsModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.SharedInternalsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteMaskModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.SpriteMaskModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteShapeModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.SpriteShapeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.StreamingModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.StreamingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SubstanceModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.SubstanceModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SubsystemsModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.SubsystemsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TerrainModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TerrainModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TerrainPhysicsModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextCoreFontEngineModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextCoreTextEngineModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TilemapModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TilemapModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TLSModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.TLSModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UIElementsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsNativeModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UIElementsNativeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UmbraModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UmbraModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UNETModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UNETModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityAnalyticsModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityConnectModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityConnectModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityCurlModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityCurlModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityTestProtocolModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityWebRequestModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VehiclesModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.VehiclesModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VFXModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.VFXModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VideoModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.VideoModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VirtualTexturingModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.VirtualTexturingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VRModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.VRModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.WindModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.WindModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.XRModule">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\UnityEngine.XRModule.dll</HintPath>
+        </Reference>
+        <Reference Include="YamlDotNet">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\YamlDotNet.dll</HintPath>
+        </Reference>
+        <Reference Include="zxing">
+            <HintPath>D:\DEVELOPMENT\Dependencies\SCPSL\AutoGenRefs\zxing.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>
